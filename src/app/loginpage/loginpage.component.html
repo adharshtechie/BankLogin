@@ -16,19 +16,19 @@
                     <div class="us1">
                     <div class="form-floating mb-2">
                         
-                        <input (change)="unameChange($event)" type="input" class="form-control us2" id="floatingInput" [placeholder]="placeh">
+                        <input #uname type="input" class="form-control us2" id="floatingInput" [placeholder]="placeh">
                         <label for="floatingInput">User ID</label>
                       </div>
                     
                       <div class="form-floating">
-                        <input type="password" class="form-control us2" id="floatingPassword" placeholder="Password">
+                        <input #pass type="password" class="form-control us2" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                       </div>
                       
                      
                     </div>
                     <div class="loginb">
-                        <button (click)="login()" type="button" style="width: 80px;" class="btn btn-success mt-3 ">Login</button>
+                        <button (click)="login(uname,pass)" type="button" style="width: 80px;" class="btn btn-success mt-3 ">Login</button>
                        
                       </div>
                       <a href="">Create New Account</a>

@@ -8,18 +8,23 @@ import { Component,OnInit } from '@angular/core';
 export class LoginpageComponent implements OnInit {
   data="Your perfect banking partner"
   placeh="your acno"
-  
+  uname:any
+  passw:any
+
   constructor() {}
     ngOnInit():void{
      
     }
-    login(){
+    login(a:any,b:any){
+      this.uname=a.value
+      this.passw=b.value
       alert("Login is clicked");
+      console.log(this.uname,this.passw);
       
     }
-    unameChange(event:any){
-      console.log(event.target.value);
+    // unameChange(event:any){
+    //   console.log(event.target.value);
       
 
-    }
+    // }
 }
