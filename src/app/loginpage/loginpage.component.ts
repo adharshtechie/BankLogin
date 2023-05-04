@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { DataService } from '../Services/data.service';
 
 @Component({
   selector: 'app-loginpage',
@@ -6,25 +7,22 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./loginpage.component.css']
 })
 export class LoginpageComponent implements OnInit {
-  data="Your perfect banking partner"
-  placeh="your acno"
+  // data="Your perfect banking partner"
+  // placeh="your acno"
   uname:any
   passw:any
 
-  constructor() {}
+  constructor(private ad:DataService) {
+
+  }
     ngOnInit():void{
      
     }
-    login(a:any,b:any){
-      this.uname=a.value
-      this.passw=b.value
-      alert("Login is clicked");
-      console.log(this.uname,this.passw);
+    login(){
+      // alert(this.uname)
+      // alert(this.ad.sdata)
+      alert(this.ad.checkData())
       
     }
-    // unameChange(event:any){
-    //   console.log(event.target.value);
-      
-
-    // }
+    
 }
